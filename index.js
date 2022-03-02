@@ -1,3 +1,3 @@
 #!/usr/bin/env node
-require('sucrase/register/ts')
+require('sucrase/register')
 require('./src/index')
