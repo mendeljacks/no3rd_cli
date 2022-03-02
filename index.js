@@ -1,2 +1,2 @@
-#!/usr/bin/env node -r sucrase/register
+#!/usr/bin/env -S node -r "sucrase/register"
 require('./index2')
