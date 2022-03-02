@@ -8,6 +8,6 @@
         "lib": ["ES2019", "DOM"],
         "downlevelIteration": true
     },
-    "include": ["src"],
+    "include": ["src", "index.js"],
     "exclude": ["node_modules"]
 }

@@ -1,18 +1,25 @@
 {
     "name": "no3rd_cli",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "description": "",
-    "main": "index.js",
+    "main": "./index.js",
     "scripts": {
         "prepare": "husky install",
-        "bump": "tsc && npm version patch --no-git-tag-version && git add package*.json && npm publish"
+        "bump": "npm version patch --no-git-tag-version && git add package*.json && npm publish"
+    },
+    "bin": {
+        "no3rd_cli": "./index.js"
     },
     "author": "",
     "license": "ISC",
     "devDependencies": {
+        "@types/node": "^17.0.21",
         "husky": "^7.0.4"
     },
     "dependencies": {
-        "commander": "^9.0.0"
+        "axios": "^0.26.0",
+        "commander": "^9.0.0",
+        "inquirer": "^8.2.0",
+        "sucrase": "^3.20.3"
     }
 }
