@@ -71,7 +71,7 @@ const get_entities = async (entity, args, fields) => {
                     `[{
 ${fields
     .map(([field_name, field_schema]: [string, any]) => {
-        return `    "${field_name}": ""`
+        return `    "${field_name}": null`
     })
     .join(',\n')}
 }]`
