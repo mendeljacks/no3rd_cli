@@ -1,3 +1,3 @@
-#!/usr/bin/env node .
+// shebang: #!/usr/bin/env node .
 require('sucrase/register/ts')
 require('./src/index')
