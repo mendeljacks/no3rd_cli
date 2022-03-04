@@ -1,4 +1,4 @@
-import inquirer from 'inquirer'
+import { prompt } from 'inquirer'
 import axios from 'axios'
 import { get_settings, write_settings } from '../helpers/settings'
 
@@ -6,7 +6,7 @@ export const login = async () => {
     const settings = get_settings()
 
     if (!settings.token) {
-        const answers = await inquirer.prompt([
+        const answers = await prompt([
             {
                 type: 'list',
                 choices: [

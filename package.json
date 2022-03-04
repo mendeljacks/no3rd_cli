@@ -1,10 +1,11 @@
 {
     "name": "no3rd_cli",
-    "version": "1.0.27",
+    "version": "1.0.28",
     "description": "",
     "main": "build/index.js",
     "scripts": {
         "dev": "node -r sucrase/register src/index",
+        "start": "node build/index.js",
         "prepare": "husky install",
         "bump": "tsc && npm version patch --no-git-tag-version && git add package*.json && npm publish"
     },
@@ -22,5 +23,19 @@
         "commander": "^9.0.0",
         "inquirer": "^8.2.0",
         "sucrase": "^3.20.3"
+    },
+    "nodemonConfig": {
+        "signal": "SIGKILL",
+        "verbose": false,
+        "ignore": [
+            "node_modules",
+            "generated",
+            "build"
+        ],
+        "watch": [
+            "./",
+            "src"
+        ],
+        "ext": "ts, js, json"
     }
 }

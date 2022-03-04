@@ -1,6 +1,6 @@
 import axios from 'axios'
 import * as child_process from 'child_process'
-import inquirer from 'inquirer'
+import { prompt } from 'inquirer'
 import { get_settings } from '../helpers/settings'
 import * as fs from 'fs'
 
@@ -36,7 +36,7 @@ export const create_entity = async (entity: string, args: { external?: string })
     }
     console.log(JSON.stringify(mutation, null, 2))
 
-    const answers = await inquirer.prompt([
+    const answers = await prompt([
         {
             type: 'confirm',
             name: 'confirm',
@@ -59,7 +59,7 @@ const get_entities = async (entity, args, fields) => {
             }
         })
 
-        const answers = await inquirer.prompt(questions)
+        const answers = await prompt(questions)
         return [answers]
     }
 
