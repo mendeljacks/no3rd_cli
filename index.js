@@ -1,3 +1,2 @@
-#!/usr/bin/env node
-console.log('I am the first test')
-require('./index2')
+#!/usr/bin/env sucrase-node
+require('./src/index')
