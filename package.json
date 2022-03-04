@@ -1,14 +1,15 @@
 {
     "name": "no3rd_cli",
-    "version": "1.0.25",
+    "version": "1.0.26",
     "description": "",
-    "main": "index.js",
+    "main": "build/index.js",
     "scripts": {
+        "dev": "node -r sucrase/register src/index",
         "prepare": "husky install",
-        "bump": "npm version patch --no-git-tag-version && git add package*.json && npm publish"
+        "bump": "tsc && npm version patch --no-git-tag-version && git add package*.json && npm publish"
     },
     "bin": {
-        "no3rd_cli": "index.js"
+        "no3rd_cli": "build/index.js"
     },
     "author": "",
     "license": "ISC",

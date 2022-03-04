@@ -1,8 +1,9 @@
 // @ts-ignore
-import app from 'commander'
+import { Command } from 'commander'
 import { create_entity } from './commands/create'
 import { login } from './commands/login'
 import { logout } from './commands/logout'
+const app = new Command()
 
 app.command('logout').action(async () => {
     logout()
