@@ -1,3 +1,4 @@
+#! /usr/bin/env node
 // @ts-ignore
 import { Command } from 'commander'
 import { create_entity } from './commands/create'
