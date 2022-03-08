@@ -1,2 +1,2 @@
 no3rd_cli create todos --none id,created_at,updated_at,resource_id -c '{"complete": 0, "created_by": "me :)"}' -e description -w nvim
-no3rd_cli read todos -q '{"todos": {"select": ["id", "tag","description"], "where": {"and": [{"eq": ["complete", false]}]}}}
+no3rd_cli read todos -q '{"todos": {"select": ["id", "tag","description"], "where": {"and": [{"eq": ["complete", false]}]}}}'
